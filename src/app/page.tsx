@@ -42,7 +42,7 @@ function Nav() {
           ))}
           <a
             href="#contact"
-            className="ml-3 px-5 py-2 rounded-lg text-sm font-medium bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent)]/80 transition-colors"
+            className="ml-3 px-5 py-2 rounded-lg text-sm font-medium bg-[var(--color-accent)] text-[#1f242d] hover:bg-[var(--color-accent)]/80 hover:shadow-[0_0_1rem_var(--color-accent)] transition-all"
           >
             Hire me
           </a>
@@ -84,13 +84,13 @@ function Hero() {
         <div
           className="absolute top-[20%] left-[50%] w-[800px] h-[800px] -translate-x-1/2 rounded-full animate-glow"
           style={{
-            background: "radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 60%)",
+            background: "radial-gradient(circle, rgba(0,238,255,0.12) 0%, transparent 60%)",
           }}
         />
         <div
           className="absolute top-[40%] right-[10%] w-[400px] h-[400px] rounded-full animate-float"
           style={{
-            background: "radial-gradient(circle, rgba(0,212,170,0.08) 0%, transparent 60%)",
+            background: "radial-gradient(circle, rgba(0,238,255,0.06) 0%, transparent 60%)",
           }}
         />
         <div className="absolute inset-0" style={{
@@ -123,7 +123,7 @@ function Hero() {
             <div className="animate-fade-up-delay-3 flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="group inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-[var(--color-accent)] text-white font-medium hover:bg-[var(--color-accent)]/80 transition-all duration-300 hover:gap-4"
+                className="group inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-[var(--color-accent)] text-[#1f242d] font-semibold hover:shadow-[0_0_1rem_var(--color-accent)] transition-all duration-300 hover:gap-4"
               >
                 Bekijk mijn werk
                 <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" className="transition-transform group-hover:translate-x-1">
@@ -164,7 +164,7 @@ function Hero() {
           <div className="hidden md:flex justify-center">
             <div className="relative">
               <div className="absolute -inset-4 rounded-full bg-[var(--color-accent)]/10 blur-2xl animate-glow" />
-              <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-[var(--color-border)] shadow-[0_0_60px_rgba(108,99,255,0.15)]">
+              <div className="relative w-72 h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-2 border-[var(--color-accent)]/30 shadow-[0_0_60px_rgba(0,238,255,0.15)]">
                 <Image
                   src="/images/yasin.jpg"
                   alt="Yasin Horani"
@@ -274,7 +274,7 @@ function Projects() {
   return (
     <section id="projects" className="py-24 md:py-32 relative">
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "linear-gradient(180deg, transparent, rgba(108,99,255,0.03) 50%, transparent)",
+        background: "linear-gradient(180deg, transparent, rgba(0,238,255,0.03) 50%, transparent)",
       }} />
 
       <div className="max-w-6xl mx-auto px-6 relative">
@@ -299,8 +299,8 @@ function Projects() {
             >
               <div className="absolute top-0 right-0 w-32 h-32 pointer-events-none" style={{
                 background: i % 2 === 0
-                  ? "radial-gradient(circle at top right, rgba(108,99,255,0.08), transparent 70%)"
-                  : "radial-gradient(circle at top right, rgba(0,212,170,0.08), transparent 70%)",
+                  ? "radial-gradient(circle at top right, rgba(0,238,255,0.08), transparent 70%)"
+                  : "radial-gradient(circle at top right, rgba(0,238,255,0.05), transparent 70%)",
               }} />
 
               <div className="flex items-start justify-between mb-6 relative">
@@ -309,8 +309,8 @@ function Projects() {
                     className="w-10 h-10 rounded-xl flex items-center justify-center"
                     style={{
                       background: i % 2 === 0
-                        ? "rgba(108,99,255,0.1)"
-                        : "rgba(0,212,170,0.1)",
+                        ? "rgba(0,238,255,0.1)"
+                        : "rgba(0,238,255,0.1)",
                     }}
                   >
                     <span className="font-mono text-xs font-bold" style={{
@@ -461,7 +461,7 @@ function Contact() {
   return (
     <section id="contact" className="py-24 md:py-32 relative">
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "linear-gradient(180deg, transparent, rgba(108,99,255,0.05) 50%, transparent)",
+        background: "linear-gradient(180deg, transparent, rgba(0,238,255,0.04) 50%, transparent)",
       }} />
 
       <div className="max-w-6xl mx-auto px-6 relative">
@@ -536,7 +536,7 @@ function Contact() {
 
           <a
             href="mailto:yasin.horani@roxit.nl"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--color-accent)] text-white font-medium text-lg hover:bg-[var(--color-accent)]/80 transition-all duration-300 hover:shadow-[0_0_40px_rgba(108,99,255,0.3)]"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[var(--color-accent)] text-[#1f242d] font-semibold text-lg hover:shadow-[0_0_1rem_var(--color-accent)] transition-all duration-300"
           >
             Stuur me een bericht
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
