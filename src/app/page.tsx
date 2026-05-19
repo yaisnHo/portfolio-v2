@@ -382,10 +382,10 @@ function Projects() {
 function Skills() {
   const categories = [...new Set(skills.map((s) => s.category))];
   const categoryColors: Record<string, string> = {
-    Backend: "var(--color-accent)",
-    Frontend: "var(--color-accent-2)",
-    Data: "#FF6B6B",
-    Tools: "#FFD93D",
+    Backend: "#00eeff",
+    Frontend: "#00ffcc",
+    Data: "#66d9ff",
+    Tools: "#99ffee",
   };
 
   return (

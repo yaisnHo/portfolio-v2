@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #0A0A0F;
-  --color-surface: #12121A;
-  --color-surface-2: #1A1A25;
-  --color-accent: #6C63FF;
-  --color-accent-2: #00D4AA;
-  --color-accent-glow: rgba(108, 99, 255, 0.15);
-  --color-text: #E4E4E7;
-  --color-text-muted: #71717A;
-  --color-border: rgba(255, 255, 255, 0.06);
-  --color-border-hover: rgba(108, 99, 255, 0.3);
+  --color-bg: #1f242d;
+  --color-surface: #323946;
+  --color-surface-2: #3a4250;
+  --color-accent: #00eeff;
+  --color-accent-2: #00b8d4;
+  --color-accent-glow: rgba(0, 238, 255, 0.15);
+  --color-text: #ffffff;
+  --color-text-muted: #a8b2c1;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(0, 238, 255, 0.4);
   --font-family: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
@@ -90,7 +90,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, #00ffcc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
