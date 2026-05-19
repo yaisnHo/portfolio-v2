@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #143F26;
-  --color-secondary: #9388FE;
-  --color-bg: #FEF9F0;
-  --color-surface: #EFEFFF;
-  --color-dark: #1C1D24;
-  --color-glow: #9979FF;
-  --color-gray: #C7BFB2;
-  --color-text: rgba(28, 29, 36, 0.75);
-  --font-family: var(--font-geist-sans), sans-serif;
-  --radius: 1.3em;
+  --color-bg: #0A0A0F;
+  --color-surface: #12121A;
+  --color-surface-2: #1A1A25;
+  --color-accent: #6C63FF;
+  --color-accent-2: #00D4AA;
+  --color-accent-glow: rgba(108, 99, 255, 0.15);
+  --color-text: #E4E4E7;
+  --color-text-muted: #71717A;
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-hover: rgba(108, 99, 255, 0.3);
+  --font-family: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
 }
 
 @theme inline {
@@ -31,13 +33,84 @@ body {
 }
 
 ::selection {
-  background: var(--color-secondary);
+  background: var(--color-accent);
   color: white;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fadeUp 0.6s ease-out 0.1s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fadeUp 0.6s ease-out 0.2s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fadeUp 0.6s ease-out 0.3s both;
+}
+
+.animate-glow {
+  animation: glow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glass {
+  background: rgba(18, 18, 26, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: 0 0 40px var(--color-accent-glow);
+  transform: translateY(-2px);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+  *, .animate-fade-up, .animate-fade-up-delay-1, .animate-fade-up-delay-2,
+  .animate-fade-up-delay-3, .animate-glow, .animate-float, .card-hover:hover {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
   }
 }
